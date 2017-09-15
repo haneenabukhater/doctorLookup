@@ -1,3 +1,6 @@
 $(document).ready(function(){
-  $('#time').text(moment());
+  $('#').submit(function(event){
+    event.preventDefault();
+
+  });
 });
