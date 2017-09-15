@@ -6,11 +6,14 @@ body{
   background-image: url(plant.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Raleway', serif;
   /*font-family: cursive;*/
 }
 .jumbotron {
   background-color: inherit;
   text-align: center;
+  text-shadow: 4px 4px 4px #aaa;
+  font-family: 'Playfair Display', serif;
 }
 .well{
   border: 2px solid grey;

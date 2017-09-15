@@ -11,6 +11,10 @@ export class Doctor{
         "first_name": doctor.profile.first_name,
         "last_name": doctor.profile.last_name,
         "address": doctor.practices[0].visit_address.street,
+        "address2": doctor.practices[0].visit_address.street2,
+        "city": doctor.practices[0].visit_address.city,
+        "state": doctor.practices[0].visit_address.state,
+        "zip": doctor.practices[0].visit_address.zip,
         "phone": doctor.practices[0].phones[0].number,
         "accept": doctor.practices[0].accepts_new_patients
       });
