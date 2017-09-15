@@ -1,6 +1,22 @@
+html{
+  position: relative;
+  min-height: 100%;
+}
+body{
+  background-image: url(plant.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*font-family: cursive;*/
+}
 .jumbotron {
   background-color: inherit;
   text-align: center;
+}
+.well{
+  border: 2px solid grey;
+  padding: 5%;
+  margin: 3%;
+  background: hsla(190, 30%, 94%, .7);
 }
 #response{
   display: none;
