@@ -4,11 +4,18 @@ import {Doctor} from './../js/doctorLookup.js';
 $(document).ready(function(){
 
   let displayDoctors = function(doctors) {
-    doctors.forEach(function(doctor){
-      console.log("display dr phone: "+doctor.phone);
-      $('ul#docList').append(`<li>Doctor Name: ${doctor.first_name} ${doctor.last_name}`);
-    });
-
+    if(doctors.length > 0){
+      doctors.forEach(function(doctor){
+        console.log("display dr phone: "+doctor.accept);
+        let acceptance = 'No';
+        if(doctor.accept === true){
+          acceptance = 'Yes';
+        }
+        $('ul#docList').append(`<br> <li><strong>Doctor Name: </strong> ${doctor.first_name} ${doctor.last_name} <br> <strong>Address:</strong> ${doctor.address} <br> <strong>Phone Number:</strong> ${doctor.phone} <br> <strong>Accepting New Patients:</strong> ` + acceptance);
+      });
+    } else {
+        $('ul#docList').append("Sorry! No doctors meet your criteria.");
+    }
   };
 
   $('#docSearch').submit(function(event){

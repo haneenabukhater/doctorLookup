@@ -12,7 +12,7 @@ export class Doctor{
         "last_name": doctor.profile.last_name,
         "address": doctor.practices[0].visit_address.street,
         "phone": doctor.practices[0].phones[0].number,
-
+        "accept": doctor.practices[0].accepts_new_patients
       });
     });
     return docArray;
