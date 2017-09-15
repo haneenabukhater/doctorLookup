@@ -1,8 +1,8 @@
 var apiKey = require('./../.env').apiKey;
 export class Doctor{
-  constuctor(symptom){
+  constuctor(symptom, doctorName){
     this.symptom = symptom;
-    // this.doctorName = doctorName;
+    this.doctorName = doctorName;
   }
   filterDocData(resultDocs){
     let docArray = [];
@@ -17,10 +17,23 @@ export class Doctor{
     });
     return docArray;
   }
-  getDoctors(symptom, displayDoctors){
+  getDoctors(symptom, docName, displayDoctors){
     let results;
     let docResults;
-    let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${symptom}&location=or-portland&user_location=45.773%2C-122.413&skip=0&limit=10&user_key=`+ apiKey;
+    let url;
+    console.log('name length ' +docName.length);
+    console.log('symptom length ' +symptom.length);
+
+    if ((docName.length > 0) && (symptom.length >0)) {
+      url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${docName}&query=${symptom}&location=or-portland&user_location=45.773%2C-122.413&skip=0&limit=20&user_key=`+ apiKey;
+    } else if ((docName.length === 0) && (symptom.length >0)){
+      url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${symptom}&location=or-portland&user_location=45.773%2C-122.413&skip=0&limit=20&user_key=`+ apiKey;
+    } else if ((docName.length > 0) && (symptom.length === 0)){
+      url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${docName}&location=or-portland&user_location=45.773%2C-122.413&skip=0&limit=20&user_key=`+ apiKey;
+    } else{
+      url = `https://api.betterdoctor.com/2016-03-01/doctors?location=or-portland&user_location=45.773%2C-122.413&skip=0&limit=20&user_key=`+ apiKey;
+    }
+    console.log('this is the url: '+url);
     $.get(url)
       .then((results) =>{
         docResults = this.filterDocData(results);
