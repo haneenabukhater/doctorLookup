@@ -22,14 +22,3 @@ $(document).ready(function(){
     $('#response').show();
   });
 });
-
-
-
-// let displayDoctors = function(doctors) {
-//   console.log(doctors);
-//   doctors.data.forEach(function(doctor){
-//     console.log(doctor.profile.first_name);
-//     $('ul#docList').append(`<li>${doctor.profile.first_name}`);
-//   });
-//
-// };
