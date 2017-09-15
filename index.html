@@ -14,24 +14,33 @@
       <div class="jumbotron">
         <h1>Doctor LookUp</h1>
       </div>
-      <div class="well">
-        <form id="docSearch">
-          <label for="symptom"> Enter your symptom: </label>
-          <input type="text" id="symptom">
-          <br>
-          <label for="docName">Enter a doctor's first name: </label>
-          <input type="text" id="docName" name="docName" >
-          <br>
-          <button type="submit" name="button">Find Doctors</button>
-        </form>
-      </div>
-      <div id="response">
+      <div class="row">
         <div class="well">
-            <ul id="docList">
-
-            </ul>
+          <form id="docSearch">
+            <label for="symptom"> Enter your symptom: </label>
+            <input type="text" id="symptom">
+            <br>
+            <label for="docName">Enter a doctor's first name: </label>
+            <input type="text" id="docName" name="docName" >
+            <br>
+            <button type="submit" name="button">Find Doctors</button>
+          </form>
         </div>
       </div>
+
+    <div class="row">
+      <div id="response">
+        <div class="col-md-12">
+          <div id="output">
+
+          </div>
+            <div id="docList">
+
+            </div>
+        </div>
+      </div>
+    </div>
+
     </div>
   </body>
 </html>

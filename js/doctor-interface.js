@@ -4,6 +4,7 @@ import {Doctor} from './../js/doctorLookup.js';
 $(document).ready(function(){
 
   let displayDoctors = function(doctors) {
+    console.log("doctor length" + doctors.length);
     if(doctors.length > 0){
       doctors.forEach(function(doctor){
 
@@ -11,18 +12,17 @@ $(document).ready(function(){
         if(doctor.accept === true){
           acceptance = 'Yes';
         }
-
-        $('ul#docList').append(`<br> <li><strong>Doctor Name: </strong> ${doctor.first_name} ${doctor.last_name} <br> <strong>Address:</strong> ${doctor.address} <br> ${doctor.city}, ${doctor.state} ${doctor.zip} <br> <strong>Phone Number:</strong> ${doctor.phone} <br> <strong>Accepting New Patients:</strong> ` + acceptance);
+        $('#output').append(`<div class = panel-panel> <br> <div class= 'panel-heading' <h3> ${doctor.first_name} ${doctor.last_name}</h3> </div> <br> <div class='panel-body'> <strong>Address:</strong> ${doctor.address} <br> ${doctor.city}, ${doctor.state} ${doctor.zip} <br> <strong>Phone Number:</strong> ${doctor.phone} <br> <strong>Accepting New Patients:</strong> ` + acceptance+ "</div>" + "</div>");
       });
     } else {
-        $('ul#docList').append("<li> Sorry! No doctors meet your criteria.");
+        $('#docList').append("<li> Sorry! No doctors meet your criteria.");
     }
   };
 
   $('#docSearch').submit(function(event){
     event.preventDefault();
-    $('#docList li').remove();
-    $('#docList br').remove();
+    $('#docList').empty();
+    $('#output').empty();
 
     let issue = $('#symptom').val();
     let docName = $('#docName').val();
