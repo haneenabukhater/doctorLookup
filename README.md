@@ -26,18 +26,18 @@ DoctorLookUp searches the BetterDoctor API with your criteria, which then return
 To search for a doctor select <i class="icon-folder-open"></i> **Find a Doctor** Button at the end of the form.ß
  <!-- ![Alt text](https://github.com/haneenabu/StartupTracker/blob/master/src/main/resources/public/images/create-event.png) -->
 
-#### <i class="icon-folder-open"></i> Switch to another event
+#### <i class="icon-folder-open"></i> Select your symptom or doctor name or both
 
-All your local documents are listed in the on the home page. You can switch from one to another by clicking an event title in the list!
+Selecting one or both of the options will display the appropriate doctors from the better doctor api!
 
  <!-- ![Alt text](https://github.com/haneenabu/StartupTracker/blob/master/src/main/resources/public/images/Switch.png) -->
 
-#### <i class="icon-trash"></i> Delete an Event
+#### <i class="icon-trash"></i> Select another search
 
-You can delete the current document by clicking <i class="icon-trash"></i> **Delete Event** on the event detail page. You can get to it by selecting the desired event in the home page.
+It will repopulate the search and show the user the new search results 
  <!-- ![Alt text](https://github.com/haneenabu/StartupTracker/blob/master/src/main/resources/public/images/Delete.png) -->
 
-> **Tip:** Check out the [<i class="icon-upload"></i> About Us](#publish-a-document) page for a description of our site and organization.
+> **Tip:** Leaving both input filters blank will show the results to a wide range of doctors in portland.
 
 ----------
 
@@ -53,9 +53,9 @@ Specs
 Input     | Output
 -------- | ---
  Title: Cool Code | ID for that entry
- Create an Event   | Event is added to the site
- Update an Event    | Event is successfully updated
- Delete an Event. | Event is successfully deleted
+ Input some symptom | Site will show doctors in portland for the symptom entered
+ Input some doctor name    | Site will show doctors in portland with the first name entered 
+ Input both a name and a symptom | Site will show doctors for both the inputs entered 
+ Input nothing | Site will render doctors in the portland area 
 
 
- <!-- ![Alt text](https://github.com/haneenabu/StartupTracker/blob/master/src/main/resources/public/images/background.jpg " title") -->
