@@ -24,7 +24,7 @@ DoctorLookUp searches the BetterDoctor API with your criteria, which then return
 #### <i class="icon-file"></i> Search Prompt
 
 To search for a doctor select <i class="icon-folder-open"></i> **Find a Doctor** Button at the end of the form.ß
- <!-- ![Alt text](https://github.com/haneenabu/StartupTracker/blob/master/src/main/resources/public/images/create-event.png) -->
+ ![Alt text](https://github.com/haneenabu/doctorLookup/blob/master/css/Screen%20Shot%202017-09-17%20at%204.35.28%20PM.png)
 
 #### <i class="icon-folder-open"></i> Select your symptom or doctor name or both
 
